@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Event list</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Event list</h1>
+<div>
+<a class="add" th:href="@{/event/new}">Add new event</a>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>File</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody th:remove="all-but-first">
+    <tr th:each="event : ${event}">
+        <td th:text="${event.file}"></td>
+        <td><a th:href ="@{/event/edit(id=${event.id})}">edit</a></td>
+        <td><a th:href ="@{/event/delete(id=${event.id})}">delete</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="../home.html" th:href="@{/}">Return home</a>
+</body>
+
+</html>

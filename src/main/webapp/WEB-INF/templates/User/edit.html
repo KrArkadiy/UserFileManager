@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html  xmlns:th = "http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Form</title>
+</head>
+<body>
+
+<h1>Edit user</h1>
+
+<form action="update" method="post">
+
+    <input type="hidden" name="id" th:value = "${user.id}"/>
+
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>
+                <input type="text" name="name" th:value="${user.name}"/>
+            </td>
+            </tr>
+    </table>
+
+    <input type="submit" value="Save"/>
+</form>
+
+</body>
+
+</html>

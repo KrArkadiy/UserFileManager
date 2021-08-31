@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html  xmlns:th = "http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Form</title>
+</head>
+<body>
+
+<h1>Edit event</h1>
+
+<form action="update" method="post">
+
+    <input type="hidden" name="id" th:value = "${event.id}"/>
+
+    <table>
+        <tr>
+            <th>File:</th>
+            <td>
+                <input type="text" name="file" th:value="${event.file}"/>
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Save"/>
+</form>
+
+</body>
+
+</html>

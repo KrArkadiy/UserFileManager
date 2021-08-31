@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org" lang="en">
+<head>
+    <title>File form</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Add new file</h1>
+
+<form action="save" method="post">
+
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>
+                <input type="text" name="name" value=""/>
+            </td>
+            <th>Location:</th>
+            <td>
+                <input type="text" name="location" value=""/>
+            </td>
+            <th>Created:</th>
+            <td>
+                <input type="datetime-local" name="created" value="">
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Save"/>
+</form>
+
+</body>
+
+</html>
